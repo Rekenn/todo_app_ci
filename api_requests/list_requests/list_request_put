@@ -1,9 +1,0 @@
-#!/bin/bash
-
-curl --header "Authorization: Bearer ${1}" \
-	--header "Content-Type: application/json" \
-	--request PUT \
-	--data '{
-		"listname": "barfoo"
-	}' \
-	http://localhost:5000/api/lists/1

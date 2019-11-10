@@ -1,9 +1,0 @@
-#!/bin/bash
-
-curl --header "Content-Type: application/json" \
-	--header "Authorization: Bearer ${1}" \
-	--request POST \
-	--data '{
-		"username": "F"
-		}' \
-	http://localhost:5000/api/users/search
