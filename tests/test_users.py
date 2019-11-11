@@ -18,9 +18,10 @@ def test_login(test_client, init_database):
         'code': 200
     }
 
+
 def test_get_lists(test_client, init_database, access_token):
     response = test_client.get(
         '/api/lists',
         headers={'Authorization': f'Bearer {access_token}'}
-        )
+    )
     assert response.status_code == 200

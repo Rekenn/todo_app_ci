@@ -1,0 +1,10 @@
+#!/bin/bash
+
+curl --header "Content-Type: application/json" \
+	--request POST \
+	--data '{
+		"username": "Foobar",
+		"password": "default",
+		"password2": "default"
+		}' \
+	http://localhost:5000/api/register
