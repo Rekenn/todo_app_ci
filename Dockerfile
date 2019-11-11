@@ -7,6 +7,7 @@ COPY . /todo-app
 RUN apt-get update && apt-get install -y \
 	default-libmysqlclient-dev \
 	python3-dev \
+    pycodestyle \
 	gcc
 
 RUN pip install -r requirements.txt
