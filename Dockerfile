@@ -12,6 +12,11 @@ RUN apt-get update && apt-get install -y \
 
 RUN pip install -r requirements.txt
 
+ENV DATABASE_URL mysql://root:password@db/TodoAppTest
+ENV SQLALCHEMY_TRACK_MODIFICATIONS False
+ENV JWT_SECRET_KEY secret
+
 CMD ["flask", "db", "init"]
+CMD ["flask", "db", "migrate"]
 CMD ["flask", "db", "upgrade"]
 CMD ["python", "project.py"]
